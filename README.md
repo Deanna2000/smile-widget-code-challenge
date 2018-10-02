@@ -1,3 +1,7 @@
+#Notes from Deanna:
+I got the price to show up as part of an object for the dates that are within the range for the altered or sale pricing. For dates that use base pricing, I was able to show just the price field. I did not get the gift card added yet as a parameter for the endpoint.
+
+
 # smile-widget-code-challenge
 
 The Smile Widget Company currently sells two types of smile widgets: a Big Widget and a Small Widget.  We'd like to add more flexibility to our product pricing.
@@ -7,7 +11,7 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
 2. Fork this repository.
 3. `>>> docker-compose up --build`
 
-## Setup without Docker
+## Setup without Docker (I set up without Docker)
 1. Install Python (>3.4)
 2. Install postgres.  By default the Django app will connect to the database named 'postgres'.  See `settings.DATABASES`.
 3. Fork this repository, then clone your repository locally.
@@ -23,7 +27,7 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
     * Big Widget - $1000
     * Small Widget - $99
 * These products, along with existing gift cards are already setup in the database.  Study the existing models and initial data.
-* Create a new ProductPrice model and setup the following price schedule:    
+* Create a new ProductPrice model and setup the following price schedule:
   * Black Friday Prices (November 23, 24, & 25)
     * Big Widget - $800
     * Small Widget - FREE!
@@ -40,3 +44,6 @@ The Smile Widget Company currently sells two types of smile widgets: a Big Widge
 ### Additional Information
 * Please use Django Rest Framework or a Python HTTP framework of your choice to create the endpoint.
 * Just as a general guideline, we've designed this exercise to take less than 4 hours.
+
+###
+URL for testing the API - http://localhost:8000/api/get-price/?code=sm_widget&date=2018-11-23
